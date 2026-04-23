@@ -30,7 +30,7 @@ const createNewsItem = async (req, res) => {
         if (!req.file) return res.status(400).json({ error: 'Image file is required' });
 
         const newItem = new News({
-            image: `http://localhost:5000/uploads/${req.file.filename}`,
+            image: `https://weaec-backend.onrender.com/uploads/${req.file.filename}`,
             title: req.body.title,
             summary: req.body.summary,
             date: req.body.date || new Date().toLocaleDateString(),

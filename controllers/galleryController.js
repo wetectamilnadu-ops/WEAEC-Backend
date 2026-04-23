@@ -30,7 +30,7 @@ const createGalleryItem = async (req, res) => {
         if (!req.file) return res.status(400).json({ error: 'Image file is required' });
 
         const newItem = new Gallery({
-            src: `http://localhost:5000/uploads/${req.file.filename}`,
+            src: `https://weaec-backend.onrender.com/uploads/${req.file.filename}`,
             title: req.body.title || 'New Event',
             description: req.body.description || '',
             date: req.body.date || new Date().toLocaleDateString(),

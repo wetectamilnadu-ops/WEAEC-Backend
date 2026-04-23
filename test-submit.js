@@ -10,7 +10,7 @@ const data = JSON.stringify({
 });
 
 const options = {
-  hostname: 'localhost',
+  hostname: 'https://weaec-backend.onrender.com',
   port: 5000,
   path: '/api/inquiry',
   method: 'POST',
